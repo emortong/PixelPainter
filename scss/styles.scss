@@ -7,9 +7,7 @@ src: url('/assets/font/Alien-Encounters-Regular.ttf') format('truetype');
 }
 
 body {
-  background-image: url("https://media.giphy.com/media/12hX6pFmVYKgzm/giphy.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
+
   h1 {
     font-family: 'Alien-Encounters';
     font-size: 150px;
@@ -19,12 +17,21 @@ body {
   }
 }
 
+#pixelPainter {
+    background-image: url("https://media.giphy.com/media/12hX6pFmVYKgzm/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+
+}
+
 #title{
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: -20px;
 
   #broken {
     width: 80px;
@@ -67,11 +74,13 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 
   #colorGrid{
-    width: 100px;
+    // width: 100px;
     flex: 1 0 100px;
     margin: 390px 0 -15px 500px;
+    position: relative;
   }
   #paintingGrid{
     flex: 1 0 700px;

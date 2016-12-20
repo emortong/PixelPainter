@@ -68,23 +68,26 @@ table {
   font-family: 'Alien-Encounters';
   src: url("/assets/font/Alien-Encounters-Regular.ttf") format("truetype"); }
 
-body {
+body h1 {
+  font-family: 'Alien-Encounters';
+  font-size: 150px;
+  text-align: center;
+  margin-top: 240px;
+  color: white; }
+
+#pixelPainter {
   background-image: url("https://media.giphy.com/media/12hX6pFmVYKgzm/giphy.gif");
   background-repeat: no-repeat;
-  background-size: cover; }
-  body h1 {
-    font-family: 'Alien-Encounters';
-    font-size: 150px;
-    text-align: center;
-    margin-top: 240px;
-    color: white; }
+  background-size: cover;
+  height: 1000px; }
 
 #title {
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: -20px; }
   #title #broken {
     width: 80px;
     order: 3;
@@ -116,11 +119,12 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 50px; }
   .gridsDiv #colorGrid {
-    width: 100px;
     flex: 1 0 100px;
-    margin: 390px 0 -15px 500px; }
+    margin: 390px 0 -15px 500px;
+    position: relative; }
   .gridsDiv #paintingGrid {
     flex: 1 0 700px;
     margin: 290px 0 -100px -425px;
