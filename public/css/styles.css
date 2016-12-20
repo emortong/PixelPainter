@@ -69,28 +69,27 @@ table {
   src: url("/assets/font/Alien-Encounters-Regular.ttf") format("truetype"); }
 
 body {
-  max-width: 1900px; }
-
-#pixelPainter {
   background-image: url("https://media.giphy.com/media/12hX6pFmVYKgzm/giphy.gif");
   background-repeat: no-repeat;
-  background-size: cover; }
-  #pixelPainter h1 {
-    font-family: 'Alien-Encounters';
-    text-align: center;
-    color: white; }
-    @media (min-width: 850px) {
-      #pixelPainter h1 {
-        font-size: 80px;
-        margin-top: 90px; } }
-    @media (min-width: 1100px) {
-      #pixelPainter h1 {
-        font-size: 100px;
-        margin-top: 130px; } }
-    @media (min-width: 1600px) {
-      #pixelPainter h1 {
-        font-size: 150px;
-        margin-top: 200px; } }
+  background-size: cover;
+  max-width: 1900px; }
+
+#pixelPainter h1 {
+  font-family: 'Alien-Encounters';
+  text-align: center;
+  color: white; }
+  @media (min-width: 550px) {
+    #pixelPainter h1 {
+      font-size: 80px;
+      margin-top: 110px; } }
+  @media (min-width: 900px) {
+    #pixelPainter h1 {
+      font-size: 100px;
+      margin-top: 130px; } }
+  @media (min-width: 1300px) {
+    #pixelPainter h1 {
+      font-size: 150px;
+      margin-top: 200px; } }
 
 #title {
   box-sizing: border-box;
@@ -100,21 +99,55 @@ body {
   align-items: center;
   margin-bottom: -20px; }
   #title #broken {
-    width: 80px;
     order: 3;
-    margin-top: 70px;
-    margin-left: -35px;
     transform: rotate(25deg); }
+    @media (min-width: 550px) {
+      #title #broken {
+        width: 40px;
+        margin-top: 30px;
+        margin-left: -20px; } }
+    @media (min-width: 900px) {
+      #title #broken {
+        width: 60px;
+        margin-top: 40px;
+        margin-left: -25px; } }
+    @media (min-width: 1300px) {
+      #title #broken {
+        width: 80px;
+        margin-top: 70px;
+        margin-left: -35px; } }
   #title #broken2 {
-    width: 45px;
     order: 2;
-    margin-top: 160px;
     transform: rotate(-25deg); }
+    @media (min-width: 550px) {
+      #title #broken2 {
+        width: 23px;
+        margin-top: 90px; } }
+    @media (min-width: 900px) {
+      #title #broken2 {
+        width: 33px;
+        margin-top: 110px; } }
+    @media (min-width: 1300px) {
+      #title #broken2 {
+        width: 45px;
+        margin-top: 160px; } }
   #title #connecting {
-    width: 85px;
-    margin-top: 110px;
-    margin-right: 10px;
     transform: rotate(-25deg); }
+    @media (min-width: 550px) {
+      #title #connecting {
+        width: 50px;
+        margin-top: 60px;
+        margin-right: 5px; } }
+    @media (min-width: 900px) {
+      #title #connecting {
+        width: 65px;
+        margin-top: 178px;
+        margin-right: 10px; } }
+    @media (min-width: 1300px) {
+      #title #connecting {
+        width: 85px;
+        margin-top: 110px;
+        margin-right: 10px; } }
 
 #bgButton {
   width: 100px;
@@ -130,16 +163,12 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  margin-top: 50px; }
+  align-items: center; }
   .gridsDiv #colorGrid {
-    flex: 1 0 100px;
-    margin: 390px 0 -15px 500px;
-    position: relative; }
+    margin-top: 170px;
+    margin-right: 30px; }
   .gridsDiv #paintingGrid {
-    flex: 1 0 700px;
-    margin: 290px 0 -100px -425px;
-    opacity: 0.86; }
+    margin-top: 170px; }
 
 #erase {
   font-family: 'Alien-Encounters';

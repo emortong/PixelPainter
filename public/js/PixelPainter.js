@@ -102,7 +102,7 @@ pixelPainter.appendChild(bgButton);
 
 bgButton.addEventListener("click", function() {
   var item = urlsArr[Math.floor(Math.random()*urlsArr.length)];
-  pixelPainter.style.backgroundImage = "url(" + item + ")";
+  document.body.style.backgroundImage = "url(" + item + ")";
 })
 
 

@@ -6,9 +6,9 @@
 src: url('/assets/font/Alien-Encounters-Regular.ttf') format('truetype');
 }
 
-$small: screen and (min-width: 850px);
-$medium: screen and (min-width: 1100px);
-$large: screen and (min-width: 1600px);
+$small: screen and (min-width: 550px);
+$medium: screen and (min-width: 900px);
+$large: screen and (min-width: 1300px);
 
 // @media only screen and ($small) {
 
@@ -23,6 +23,9 @@ $large: screen and (min-width: 1600px);
 // }
 
 body {
+  background-image: url("https://media.giphy.com/media/12hX6pFmVYKgzm/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
   max-width: 1900px;
 }
 
@@ -30,28 +33,25 @@ body {
 
 
 #pixelPainter {
-    background-image: url("https://media.giphy.com/media/12hX6pFmVYKgzm/giphy.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
   // height: 1000px;
     h1 {
     font-family: 'Alien-Encounters';
     text-align: center;
     color: white;
     @media #{$small} {
-    font-size: 80px;
-    margin-top: 90px;
+      font-size: 80px;
+      margin-top: 110px;
     }
 
     @media #{$medium} {
-    font-size: 100px;
-    margin-top: 130px;
+      font-size: 100px;
+      margin-top: 130px;
 
     }
 
     @media #{$large} {
-    font-size: 150px;
-    margin-top: 200px;
+      font-size: 150px;
+      margin-top: 200px;
     }
   }
 }
@@ -65,23 +65,68 @@ body {
   margin-bottom: -20px;
 
   #broken {
-    width: 80px;
     order:3;
-    margin-top: 70px;
-    margin-left: -35px;
     transform: rotate(25deg);
+
+    @media #{$small} {
+      width: 40px;
+      margin-top: 30px;
+      margin-left: -20px;
+    }
+
+    @media #{$medium} {
+      width: 60px;
+      margin-top: 40px;
+      margin-left: -25px;
+    }
+
+
+    @media #{$large} {
+      width: 80px;
+      margin-top: 70px;
+      margin-left: -35px;
+    }
   }
   #broken2 {
-    width: 45px;
     order:2;
-    margin-top: 160px;
     transform: rotate(-25deg);
+    @media #{$small} {
+      width: 23px;
+      margin-top: 90px;
+    }
+
+    @media #{$medium} {
+      width: 33px;
+      margin-top: 110px;
+    }
+
+    @media #{$large} {
+      width: 45px;
+      margin-top: 160px;
+    }
+
+
+
   }
   #connecting {
-    width: 85px;
-    margin-top: 110px;
-    margin-right: 10px;
     transform: rotate(-25deg);
+    @media #{$small} {
+      width: 50px;
+      margin-top: 60px;
+      margin-right: 5px;
+    }
+
+    @media #{$medium} {
+      width: 65px;
+      margin-top: 178px;
+      margin-right: 10px;
+    }
+
+    @media #{$large} {
+      width: 85px;
+      margin-top: 110px;
+      margin-right: 10px;
+    }
   }
 
 }
@@ -105,18 +150,13 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 
-  #colorGrid{
-    // width: 100px;
-    flex: 1 0 100px;
-    margin: 390px 0 -15px 500px;
-    position: relative;
+  #colorGrid {
+    margin-top: 170px;
+    margin-right: 30px;
   }
-  #paintingGrid{
-    flex: 1 0 700px;
-    margin: 290px 0 -100px -425px;
-    opacity: 0.86;
+  #paintingGrid {
+    margin-top: 170px;
   }
 }
 
