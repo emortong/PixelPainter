@@ -40,8 +40,8 @@ main.appendChild(gridsDiv);
         cell.classList.add('colors');
         cell.style.border = "thin solid black"
         cell.style.display = "inline-block";
-        cell.style.height = '10px';
-        cell.style.width = '10px';
+        cell.style.height = '15px';
+        cell.style.width = '15px';
       }
     }
   }
@@ -76,7 +76,7 @@ var clicked = false;
         row.appendChild(cell);
 
         cell.style.backgroundColor = 'white';
-        cell.style.border = "1px solid black";
+        // cell.style.border = "1px solid black";
         cell.classList.add('paintGridCells');
         cell.id = "div" + x;
         cell.style.backgroundColor = 'white';
@@ -108,7 +108,7 @@ var clicked = false;
 
 
 
-  createPaintDiv(25,40);
+  createPaintDiv(35,45);
 
 
 
@@ -145,6 +145,28 @@ colorGrid.appendChild(clearDiv);
         toBeCleared[z].style.backgroundColor = "white";
       }
   })
+
+
+var urlsArr = ["https://media.giphy.com/media/ZTn3hK0XgHUVa/giphy.gif",
+"https://media.giphy.com/media/Iuno0N5wK2zkc/giphy.gif",
+"https://media.giphy.com/media/BkMjH8hlykeDS/giphy.gif",
+"https://media.giphy.com/media/l41Yvub60fF4OU15C/giphy.gif",
+"https://media.giphy.com/media/VQlbJnrlVYDkY/giphy.gif",
+"https://media.giphy.com/media/4SgI90qdgYSxG/giphy.gif",
+"https://media.giphy.com/media/hQY6aAY1kM05G/giphy.gif",
+"https://media.giphy.com/media/Iao0dDx3fkKLS/giphy.gif",
+"https://media.giphy.com/media/10nD7q6UjRgbe/giphy.gif"]
+
+var bgButton = document.createElement('button');
+bgButton.id = "bgButton";
+bgButton.innerHTML = "Click!"
+main.appendChild(bgButton);
+
+bgButton.addEventListener("click", function() {
+  var item = urlsArr[Math.floor(Math.random()*urlsArr.length)];
+  document.body.style.backgroundImage = "url(" + item + ")";
+
+})
 
 
 

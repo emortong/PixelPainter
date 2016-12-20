@@ -29,11 +29,9 @@
     "gulp-connect": "^5.0.0",
     "gulp-sass": "^3.0.0"
   },
-    "esnext": true,
-    "space": true,
-    "globals": [
-      "window"
-    ]
-  },
-  "homepage": "https://github.com/jhoun/PixelPainter#readme"
+  "esnext": true,
+  "space": true,
+  "globals": [
+    "window"
+  ]
 }

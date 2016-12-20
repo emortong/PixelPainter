@@ -1,44 +1,98 @@
 @import "partials/reset";
 @import "partials/clearfix";
 
-$dark-color : aquamarine;
 
+@font-face { font-family: 'Alien-Encounters';
+src: url('/assets/font/Alien-Encounters-Regular.ttf') format('truetype');
+}
 
 body {
-  background: $dark-color;
+  background-image: url("https://media.giphy.com/media/12hX6pFmVYKgzm/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
   h1 {
-    font-family: 'Concert One', cursive;
-    font-size: 40px;
+    font-family: 'Alien-Encounters';
+    font-size: 150px;
     text-align: center;
+    margin-top: 240px;
+    color: white;
   }
 }
+
+#title{
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  #broken {
+    width: 80px;
+    order:3;
+    margin-top: 70px;
+    margin-left: -35px;
+    transform: rotate(25deg);
+  }
+  #broken2 {
+    width: 45px;
+    order:2;
+    margin-top: 160px;
+    transform: rotate(-25deg);
+  }
+  #connecting {
+    width: 85px;
+    margin-top: 160px;
+    margin-right: 20px;
+    transform: rotate(-25deg);
+  }
+
+}
+
+#bgButton {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  position: absolute;
+  right: 40px;
+  top: 90px;
+  opacity: 0.7;
+}
+
+
 
 
 .gridsDiv {
   box-sizing: border-box;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+
   #colorGrid{
-    flex: 0 0 100px;
-    margin: 50px 0 0 100px;
+    width: 100px;
+    flex: 1 0 100px;
+    margin: 390px 0 -15px 500px;
   }
   #paintingGrid{
-    flex: 0 0 500px;
-    margin: 50px 0 0 0;
+    flex: 1 0 700px;
+    margin: 290px 0 -100px -425px;
+    opacity: 0.86;
   }
 }
 
 
 #erase{
-  font-family: 'Concert One', regular;
+  font-family: 'Alien-Encounters';
   font-size: 20px;
-  width:  72px
+  width:  102px;
+  background-color: aquamarine;
+
 }
 
 #clear{
-  font-family: 'Concert One', regular;
+  font-family: 'Alien-Encounters';
   font-size: 20px;
-  width:  72px
+  width:  102px;
+  background-color: aquamarine;
+  opacity: 1;
 }
