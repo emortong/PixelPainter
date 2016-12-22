@@ -9,7 +9,7 @@ pixelPainter.appendChild(gridsDiv);
 //Color Grid
 var colorGrid = document.createElement('div');
 colorGrid.id = "colorGrid";
-gridsDiv.appendChild(colorGrid);
+// gridsDiv.appendChild(colorGrid);
 
 //Painting Grid
 var paintingGrid = document.createElement('div');
@@ -57,53 +57,117 @@ var urlsArr = ["https://media.giphy.com/media/ZTn3hK0XgHUVa/giphy.gif",
 "https://media.giphy.com/media/BkMjH8hlykeDS/giphy.gif",
 "https://media.giphy.com/media/l41Yvub60fF4OU15C/giphy.gif",
 "https://media.giphy.com/media/VQlbJnrlVYDkY/giphy.gif",
-"https://media.giphy.com/media/4SgI90qdgYSxG/giphy.gif",
 "https://media.giphy.com/media/hQY6aAY1kM05G/giphy.gif",
 "https://media.giphy.com/media/Iao0dDx3fkKLS/giphy.gif",
 "https://media.giphy.com/media/10nD7q6UjRgbe/giphy.gif",
+"https://media.giphy.com/media/10Rl4clceaqFwc/giphy.gif",
+"https://media.giphy.com/media/fde2UrtVei4Jq/giphy.gif",
 "https://media.giphy.com/media/12hX6pFmVYKgzm/giphy.gif"]
 
 //erase div
-var eraseDiv = document.createElement('div');
-eraseDiv.className = "eraseDiv";
-colorGrid.appendChild(eraseDiv);
+// var eraseDiv = document.createElement('div');
+// eraseDiv.className = "eraseDiv";
+// colorGrid.appendChild(eraseDiv);
 
 //Erase Button
-var eraseButton = document.createElement('button');
-eraseButton.id = "erase";
-eraseButton.innerHTML = "erase";
-eraseDiv.appendChild(eraseButton);
-eraseButton.addEventListener('click', function(e) {
-    selectedColor = "white";
-})
+// var eraseButton = document.createElement('button');
+// eraseButton.id = "erase";
+// eraseButton.innerHTML = "erase";
+// pixelPainter.appendChild(eraseButton);
+// eraseButton.addEventListener('click', function(e) {
+//     selectedColor = "white";
+// })
 
 //clear div
-var clearDiv = document.createElement('div');
-clearDiv.className = "clearDiv";
-colorGrid.appendChild(clearDiv);
+// var clearDiv = document.createElement('div');
+// clearDiv.className = "clearDiv";
+// colorGrid.appendChild(clearDiv);
 
  //Clear Button
-var clearButton = document.createElement('button');
-clearButton.id = "clear";
-clearButton.innerHTML = "clear";
-clearDiv.appendChild(clearButton);
+var recycleBin = document.createElement('IMG');
+recycleBin.id = "recycleBin";
+recycleBin.setAttribute("src", "http://www.it.uom.gr/project/intro/conwin/mwin8/95desktop5.gif")
+pixelPainter.appendChild(recycleBin);
 
-clearButton.addEventListener('click', function(e) {
+recycleBin.addEventListener('click', function(e) {
 var toBeCleared = document.getElementsByClassName("paintGridCells");
   for(var z = 0; z < toBeCleared.length; ++z){
     toBeCleared[z].style.backgroundColor = "white";
   }
 })
 
-var bgButton = document.createElement('button');
-bgButton.id = "bgButton";
-bgButton.innerHTML = "Click!"
-pixelPainter.appendChild(bgButton);
 
-bgButton.addEventListener("click", function() {
+var folder = document.createElement('IMG');
+folder.id = "folder";
+folder.setAttribute("src", "http://posthtml.org/img/folder2.png")
+pixelPainter.appendChild(folder);
+
+var folder2 = document.createElement('IMG');
+folder2.id = "folder2";
+folder2.setAttribute("src", "http://posthtml.org/img/folder2.png")
+pixelPainter.appendChild(folder2);
+
+var folder3 = document.createElement('IMG');
+folder3.id = "folder3";
+folder3.setAttribute("src", "http://posthtml.org/img/folder2.png")
+pixelPainter.appendChild(folder3);
+
+folder.addEventListener("click", changeBg);
+folder2.addEventListener("click", changeBg);
+folder3.addEventListener("click", changeBg);
+
+var navBar = document.createElement('div');
+navBar.id = 'navBar';
+pixelPainter.appendChild(navBar);
+
+var startButton = document.createElement('IMG');
+startButton.id = 'startButton';
+startButton.setAttribute('src', 'https://cdn0.vox-cdn.com/thumbor/0csUNOsUAMfelAMe6KEFaSRB8zs=/cdn0.vox-cdn.com/uploads/chorus_asset/file/6028879/win95s.0.gif')
+navBar.appendChild(startButton);
+
+startButton.addEventListener('click', function() {
+  if(colorGrid.classList.contains('clicked')) {
+    navBar.removeChild(colorGrid);
+    colorGrid.classList.remove("clicked");
+  } else {
+    colorGrid.classList.add("clicked");
+    navBar.appendChild(colorGrid);
+  }
+})
+
+var timeDiv = document.createElement('span')
+timeDiv.id = "time";
+navBar.appendChild(timeDiv);
+
+
+
+
+function changeBg() {
   var item = urlsArr[Math.floor(Math.random()*urlsArr.length)];
   document.body.style.backgroundImage = "url(" + item + ")";
-})
+}
+
+var timespan = Date.now();
+
+//need to fix time
+function msToTime(duration) {
+    var milliseconds = parseInt((duration%1000)/100)
+        , seconds = parseInt((duration/1000)%60)
+        , minutes = parseInt((duration/(1000*60))%60)
+        , hours = parseInt((duration/(1000*60*60))%24);
+
+    hours +=14; //hawaii timezone
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+
+    return hours + ":" + minutes;
+}
+
+
+timeDiv.innerHTML = msToTime(timespan);
+
 
 
 function createColorDiv(numRows, numCell) {
