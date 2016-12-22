@@ -205,6 +205,15 @@ body {
   height: 45px;
   position: absolute;
   left: 20px;
+  top: 480px; }
+
+#erase {
+  font-family: 'Alien-Encounters';
+  font-size: 20px;
+  width: 50px;
+  height: 65px;
+  position: absolute;
+  left: 20px;
   top: 390px; }
 
 .gridsDiv {
@@ -212,21 +221,27 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: grey;
+  margin-top: 200px;
+  margin-left: 610px;
+  margin-right: 610px;
+  padding-left: -10px;
+  padding-right: 0px;
+  padding-top: 20px;
+  padding-bottom: 3px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  box-shadow: inset 1px 1px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px #000; }
   .gridsDiv #paintingGrid {
-    margin-top: 170px;
-    margin-right: -50px; }
+    margin-left: -5px;
+    margin-right: -5px;
+    border-box: 1px solid gray;
+    box-shadow: 1px 0 #fff, 0 1px #fff, 1px 1px #fff; }
 
 #colorGrid {
   margin-left: 6px;
   top: 736px;
   position: absolute; }
-
-#erase {
-  font-family: 'Alien-Encounters';
-  font-size: 20px;
-  width: 102px;
-  height: 45px;
-  position: absolute;
-  left: 20px;
-  top: 490px; }

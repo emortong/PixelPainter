@@ -70,13 +70,13 @@ var urlsArr = ["https://media.giphy.com/media/ZTn3hK0XgHUVa/giphy.gif",
 // colorGrid.appendChild(eraseDiv);
 
 //Erase Button
-// var eraseButton = document.createElement('button');
-// eraseButton.id = "erase";
-// eraseButton.innerHTML = "erase";
-// pixelPainter.appendChild(eraseButton);
-// eraseButton.addEventListener('click', function(e) {
-//     selectedColor = "white";
-// })
+var eraser = document.createElement('IMG');
+eraser.id = "erase";
+eraser.setAttribute('src', 'https://t4.rbxcdn.com/fb60f641efd38c04d7e75afbfe8624cf')
+pixelPainter.appendChild(eraser);
+eraser.addEventListener('click', function(e) {
+    selectedColor = "white";
+})
 
 //clear div
 // var clearDiv = document.createElement('div');
@@ -127,10 +127,12 @@ navBar.appendChild(startButton);
 
 startButton.addEventListener('click', function() {
   if(colorGrid.classList.contains('clicked')) {
+    startButton.setAttribute('src', 'https://cdn0.vox-cdn.com/thumbor/0csUNOsUAMfelAMe6KEFaSRB8zs=/cdn0.vox-cdn.com/uploads/chorus_asset/file/6028879/win95s.0.gif')
     navBar.removeChild(colorGrid);
     colorGrid.classList.remove("clicked");
   } else {
     colorGrid.classList.add("clicked");
+    startButton.setAttribute('src', 'assets/images/clicked-start.png')
     navBar.appendChild(colorGrid);
   }
 })
